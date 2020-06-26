@@ -1,11 +1,10 @@
 import axios from 'axios';
-const url = 'http://localhost:5000/api/posts/a'
+const url = 'http://localhost:5000/api/posts/'
 
 class PostService{
 
 //getPosts
 static getPosts() {  
-    alert("go on serivce")
     return new Promise ((resolve,reject) => {
         axios.get(url).then((res) => {
             console.log(res);
@@ -29,7 +28,7 @@ static insertPost(text){
         return axios.post(url, {text})
     }
 
-    static deletePost(id){
+static deletePost(id){
         return axios.delete(`${url}${id}`);
     }
 

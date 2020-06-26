@@ -4,13 +4,13 @@ const mongodb = require ("mongodb");
 
 router = express.Router();
 
-router.get('/a', async(req,res)=>{
+router.get('/', async(req,res)=>{
 const posts = await loadPostsCollection();
 await res.send(await posts.find({}).toArray())
 
 })
 
-router.post('/a',async(req,res)=>{
+router.post('/',async(req,res)=>{
     const posts = await loadPostsCollection();
     await posts.insertOne({
         text: req.body.text,
