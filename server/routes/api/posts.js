@@ -10,7 +10,6 @@ await res.send(await posts.find({}).toArray())
 
 })
 
-
 router.post('/a',async(req,res)=>{
     const posts = await loadPostsCollection();
     await posts.insertOne({
@@ -19,7 +18,7 @@ router.post('/a',async(req,res)=>{
 
     });
     res.status(201).send()
-})
+})  
 
 
 router.delete('/:id', async(req,res)=>{
