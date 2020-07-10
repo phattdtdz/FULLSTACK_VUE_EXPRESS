@@ -1,13 +1,12 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <PostComponent msg="Welcome to Your Vue.js App"></PostComponent>
+        <PostComponent></PostComponent>
   </div>
 </template>
-
 <script>
 import PostComponent from './components/PostComponent.vue'
 console.log(PostComponent.data)
+
 export default {
   name: 'Apps',
   components: {

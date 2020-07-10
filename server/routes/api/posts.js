@@ -13,9 +13,9 @@ await res.send(await posts.find({}).toArray())
 router.post('/',async(req,res)=>{
     const posts = await loadPostsCollection();
     await posts.insertOne({
-        text: req.body.text,
-        createdAt: new Date()
-
+        name: req.body.text,
+        number_phone: req.body.text
+        
     });
     res.status(201).send()
 })  
